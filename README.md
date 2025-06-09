@@ -22,58 +22,48 @@ This aligns with roles requiring expertise in data analysis, A/B testing, and st
 - **Actionable Insights**: Identifies whether the new campaign significantly improves prescription uptake and explores variations by health condition and time of day.
 
 ## Explanation of Results
-1. **Dataset Overview (Chunk 16)**:
+1. **Dataset Overview**:
    - The adapted dataset contains 588,101 records with no missing values, covering columns like `test group`, `converted`, `total ads`, `most ads day`, `most ads hour`, `age`, `health_condition`, and `time_slot`.
    - The `converted` column (0 or 1) indicates prescription uptake, with a mean uptake rate of 2.52%.
    - `total ads` has a mean of 24.82, with a maximum of 61 after outlier removal.
    - The dataset is balanced across health conditions (~33% each for Cardiovascular, Neurology, Endocrinology).
 
-2. **Frequency Tables (Chunk 17)**:
+2. **Frequency Tables**:
    - `test group`: 96% of users saw the new campaign (`ad`), 4% saw the control (`psa`), reflecting the dataset's imbalance.
    - `most ads day`: Ad exposure is fairly evenly distributed across days, with Friday (15.75%) and Tuesday (13.17%) as the most and least frequent.
    - `health_condition`: Nearly equal distribution across Cardiovascular (33.40%), Endocrinology (33.33%), and Neurology (33.27%), ensuring unbiased analysis across therapeutic areas.
 
-3. **Sample Size Calculation (Chunk 27)**:
+3. **Sample Size Calculation**:
    - Required sample size: 5,631 per group, calculated using conversion rates (`p1 = 0.017854` for `psa`, `p2 = 0.025547` for `ad`), significance level (α = 0.05), and power (0.8).
    - Ensures the test can detect a meaningful difference in uptake rates with high confidence.
 
-4. **Group Size Adjustment (Chunk 33)**:
+4. **Group Size Adjustment**:
    - The `psa` group (21,328) is smaller than the `ad` group (514,716), so the sample size is adjusted to 5,631 per group to ensure balanced testing.
    - Random sampling with a fixed seed (42) ensures reproducibility.
 
-5. **T-Test (Chunk 28)**:
+5. **T-Test**:
    - T-statistic: 2.60, P-value: 0.0092 (< 0.05), rejecting the null hypothesis.
    - Indicates a statistically significant difference in prescription uptake between the `ad` and `psa` groups, suggesting the new campaign is more effective.
 
-6. **Odds Ratio (Chunk 49)**:
+6. **Odds Ratio**:
    - Odds Ratio: 1.52 (95% CI: [1.11, 2.08]), indicating the `ad` group has 1.52 times higher odds of prescription uptake than the `psa` group.
    - The confidence interval excludes 1, reinforcing the significance of the result.
 
-7. **ANOVA for Health Condition (Chunk 50)**:
+7. **ANOVA for Health Condition**:
    - F-statistic: 1.27, P-value: 0.2811 (> 0.05), failing to reject the null hypothesis.
    - Suggests no significant difference in prescription uptake across Cardiovascular, Neurology, and Endocrinology groups, indicating the campaign's effect is consistent across therapeutic areas.
 
-8. **Visualizations (Chunks 42–44)**:
+8. **Visualizations**:
    - **Health Condition Uptake**: Bar plot shows similar uptake rates across health conditions, consistent with the ANOVA result.
    - **Ad vs. PSA Uptake**: The `ad` group has a higher uptake rate than `psa`, visually confirming the t-test result.
    - **Time Slot Uptake**: Uptake rates vary slightly by time slot (Morning, Afternoon, Evening, Night), suggesting potential optimization opportunities for ad scheduling.
 
-## Column Conversions and Additions
-- **Converted Columns**:
-  - `converted`: Changed from boolean (True/False) to integer (1/0) for numerical analysis and compatibility with statistical tests like t-tests and ANOVA.
-  - **Why**: Integer format simplifies calculations (e.g., mean uptake rate) and ensures compatibility with statistical libraries.
+**Results**:
+- The t-test result answers the primary question: “Is the new campaign (ad) more effective than the control (psa)?” The answer is yes, supporting the adoption of the new campaign.
+- The ANOVA result answers a secondary question: “Does the campaign’s effectiveness vary by health condition?” The answer is no, suggesting the ad campaign’s benefit is consistent across Cardiovascular, Neurology, and Endocrinology patients. This is valuable, as it indicates a single campaign strategy can work across therapeutic areas without customization.
+- Together, these results provide a fuller picture: the new campaign is effective, and its effectiveness doesn’t depend on the patient’s health condition.
 
-- **Added Columns**:
-  - `age`: Randomly generated integers (65–90) to simulate elderly patients.
-    - **Why**: Aligns the dataset with the target population (elderly patients), enabling healthcare-specific analysis.
-  - `health_condition`: Randomly assigned values (Cardiovascular, Neurology, Endocrinology).
-    - **Why**: Reflects key therapeutic areas in pharmaceutical marketing, allowing analysis of campaign effectiveness across different patient needs.
-  - `time_slot`: Derived from `most ads hour` (categorized into Morning, Afternoon, Evening, Night).
-    - **Why**: Enables exploration of ad effectiveness by time of day, critical for optimizing campaign scheduling for elderly patients.
-
-- **Dropped Columns**:
-  - `Unnamed: 0`, `user id`: Removed as they were irrelevant identifiers not needed for analysis.
-    - **Why**: Reduces noise and focuses on relevant features for A/B testing.
+  
 
 ## Why This Project Is Unique
 - **Healthcare Focus**: Tailors A/B testing to pharmaceutical marketing for elderly patients, addressing an underserved population with specific needs.
@@ -91,5 +81,5 @@ This project adheres to industry standards in pharmaceutical data science and an
 - **Scalability**: Incorporates Snowflake for handling large datasets, aligning with tools used in pharmaceutical analytics (e.g., Snowflake, Azure).
 - **Documentation**: Provides detailed explanations of methodology and results, meeting expectations for reproducibility and collaboration in data science roles.
 
-This project is ideal for showcasing skills in data analysis, statistical modeling, and A/B testing, directly relevant to roles requiring data-driven insights in pharmaceutical marketing.
+
 
