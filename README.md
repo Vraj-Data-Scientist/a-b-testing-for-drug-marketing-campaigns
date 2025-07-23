@@ -94,7 +94,7 @@ This project aligns with pharmaceutical data science best practices:
 
 ## 📬 Contact
 
-For questions or collaboration, reach out via [GitHub Issues](https://github.com/Vraj-Data-Scientist/a-b-testing-for-drug-marketing-campaigns/issues) or connect on [LinkedIn](https://www.linkedin.com/in/your-profile).
+For questions or collaboration, reach out via [GitHub Issues](https://github.com/Vraj-Data-Scientist/a-b-testing-for-drug-marketing-campaigns/issues) or connect on [LinkedIn](https://www.linkedin.com/in/vraj-dobariya/).
 
 ---
 
