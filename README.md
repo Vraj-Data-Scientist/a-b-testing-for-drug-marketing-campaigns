@@ -108,9 +108,13 @@ This project aligns with pharmaceutical data science best practices:
 - 🔍 **Advanced Segmentation**: Explore interactions between age, health condition, and time slot.
 - 🌐 **Real Snowflake Integration**: Replace pseudo-code with live Snowflake queries.
 
-## 📬 Contact
+---
 
-For questions or collaboration, reach out via [GitHub Issues](https://github.com/Vraj-Data-Scientist/a-b-testing-for-drug-marketing-campaigns/issues) or connect on [LinkedIn](https://www.linkedin.com/in/vraj-dobariya/).
+## 🧑‍💻 About the Developer
+
+Developed by **Vraj Dobariya**, a data scientist passionate about building AI-driven solutions for finance and beyond. Connect with me on:
+- 📂 [GitHub](https://github.com/Vraj-Data-Scientist)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/vraj-dobariya/) 
 
 ---
 
