@@ -50,6 +50,22 @@ In pharmaceutical marketing, targeting underserved populations like elderly pati
 
 **Takeaway**: The new campaign is more effective and works consistently across therapeutic areas, enabling a unified strategy.
 
+### 📸 Visualizations
+
+The project includes insightful visualizations to illustrate key findings, making results accessible to stakeholders. Below are the generated plots:
+
+- **Health Condition Uptake** 🩺: Shows prescription uptake rates across Cardiovascular, Neurology, and Endocrinology.
+  ![Health Condition Uptake](https://github.com/Vraj-Data-Scientist/a-b-testing-for-drug-marketing-campaigns/blob/main/health_condition_uptake.png)
+
+- **Odds Ratio** 📊: Displays the odds ratio (1.52, 95% CI: 1.11–2.08) for the new campaign vs. control.
+  ![Odds Ratio](https://github.com/Vraj-Data-Scientist/a-b-testing-for-drug-marketing-campaigns/blob/main/odds_ratio.png)
+
+- **Test Group Uptake** 📈: Compares prescription uptake between the new campaign (`ad`) and control (`psa`).
+  ![Test Group Uptake](https://github.com/Vraj-Data-Scientist/a-b-testing-for-drug-marketing-campaigns/blob/main/test_group_uptake.png)
+
+- **Time Slot Uptake** ⏰: Highlights variations in uptake rates by time slots (Morning, Afternoon, Evening, Night).
+  ![Time Slot Uptake](https://github.com/Vraj-Data-Scientist/a-b-testing-for-drug-marketing-campaigns/blob/main/time_slot_uptake.png)
+
 ## 🌟 Why This Project Stands Out
 
 - **Healthcare Focus** 🩺: Tailored for elderly patients, addressing a critical demographic in pharmaceutical marketing.
